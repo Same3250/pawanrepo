@@ -39,6 +39,9 @@ pause
 exit /b 0
 
 :error
+
+
+
 echo.
 echo ERROR: Setup failed. See output above.
 pause
