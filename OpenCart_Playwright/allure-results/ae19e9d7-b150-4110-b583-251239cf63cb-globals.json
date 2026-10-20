@@ -1,1 +1,0 @@
-{"attachments":[],"errors":[{"message":"afterEach hook failed: Test timeout of 30000ms exceeded while running \"afterEach\" hook.","trace":"Test timeout of 30000ms exceeded while running \"afterEach\" hook.\n    at C:\\PlaywrightProject\\Framework_DB_Automation\\OpenCart_Playwright\\fixtures\\pageFixtures.ts:53:6","timestamp":1792446845854}]}

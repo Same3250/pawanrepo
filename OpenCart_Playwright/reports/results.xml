@@ -1,8 +1,0 @@
-<testsuites id="" name="" tests="2" failures="0" skipped="0" errors="0" time="4.183287999999999">
-<testsuite name="api\auth.spec.ts" timestamp="2026-10-20T10:41:24.708Z" hostname="chromium" tests="2" failures="0" skipped="0" time="1.223" errors="0">
-<testcase name="FakeStore Authentication API Tests › POST - Successful login @master @sanity @api" classname="api\auth.spec.ts" time="0.571">
-</testcase>
-<testcase name="FakeStore Authentication API Tests › POST - Invalid login @master @regression @api" classname="api\auth.spec.ts" time="0.652">
-</testcase>
-</testsuite>
-</testsuites>

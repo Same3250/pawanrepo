@@ -1,0 +1,45 @@
+# Dependencies
+node_modules/
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Playwright output and local browser state
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+playwright/.auth/
+.playwright-cli/
+.playwright-mcp/
+
+# Generated test reports
+allure-results/
+allure-report/
+custom-report/
+reports/
+
+# Build and coverage output
+dist/
+build/
+coverage/
+
+# Logs and local caches
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+.cache/
+*.tsbuildinfo
+
+# Local IDE and operating-system files
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Private key material
+*.pem
+*.key
