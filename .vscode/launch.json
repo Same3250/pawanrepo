@@ -1,0 +1,40 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\OpenCart_Playwright\\tests\\web\\customer-shopping-journey.spec.ts",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Playwright: Customer Shopping Journey",
+            "program": "${workspaceFolder}\\node_modules\\@playwright\\test\\cli.js",
+            "args": [
+                "test",
+                "tests/web/customer-shopping-journey.spec.ts",
+                "--config",
+                "playwright.config.ts",
+                "--workers=1"
+            ],
+            "cwd": "${workspaceFolder}\\OpenCart_Playwright",
+            "console": "integratedTerminal",
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        }
+    ]
+}

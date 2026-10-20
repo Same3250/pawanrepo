@@ -1,0 +1,132 @@
+- generic [ref=f1e2]:
+  - banner [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - link [ref=f1e5] [cursor=pointer]:
+        - /url: http://localhost/opencart/upload/admin/index.php?route=common/dashboard&user_token=b4515858ad6aa719008fef0485ea1b80
+        - img "OpenCart" [ref=f1e6]
+      - list [ref=f1e7]:
+        - listitem [ref=f1e8]:
+          - link [ref=f1e9] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=f1e11]:
+          - link [ref=f1e12] [cursor=pointer]:
+            - /url: en-gb
+            - img "English" [ref=f1e13]
+        - listitem [ref=f1e14]:
+          - link [ref=f1e15] [cursor=pointer]:
+            - /url: "#"
+            - img "John Doe" [ref=f1e16]
+            - generic [ref=f1e17]: John Doe
+        - listitem [ref=f1e19]:
+          - link "Logout" [ref=f1e20] [cursor=pointer]:
+            - /url: http://localhost/opencart/upload/admin/index.php?route=common/logout&user_token=b4515858ad6aa719008fef0485ea1b80
+  - navigation [ref=f1e22]:
+    - generic [ref=f1e23]: Navigation
+    - list [ref=f1e25]:
+      - listitem [ref=f1e26]:
+        - link "Dashboard" [ref=f1e27] [cursor=pointer]:
+          - /url: http://localhost/opencart/upload/admin/index.php?route=common/dashboard&user_token=b4515858ad6aa719008fef0485ea1b80
+      - listitem [ref=f1e29]:
+        - link "Catalog " [ref=f1e30] [cursor=pointer]:
+          - /url: "#collapse-1"
+        - text:                 
+      - listitem [ref=f1e32]:
+        - link "CMS " [ref=f1e33] [cursor=pointer]:
+          - /url: "#collapse-2"
+        - text:    
+      - listitem [ref=f1e35]:
+        - link "Extensions " [ref=f1e36] [cursor=pointer]:
+          - /url: "#collapse-3"
+        - text:       
+      - listitem [ref=f1e38]:
+        - link "Design " [ref=f1e39] [cursor=pointer]:
+          - /url: "#collapse-4"
+        - text:     
+      - listitem [ref=f1e41]:
+        - link "Sales " [ref=f1e42] [cursor=pointer]:
+          - /url: "#collapse-5"
+        - text:   
+      - listitem [ref=f1e44]:
+        - link "Customers " [ref=f1e45] [cursor=pointer]:
+          - /url: "#collapse-6"
+        - text:     
+      - listitem [ref=f1e47]:
+        - link "Marketing " [ref=f1e48] [cursor=pointer]:
+          - /url: "#collapse-7"
+        - text:    
+      - listitem [ref=f1e50]:
+        - link "System " [ref=f1e51] [cursor=pointer]:
+          - /url: "#collapse-8"
+        - text:                                   
+      - listitem [ref=f1e53]:
+        - link "Reports " [ref=f1e54] [cursor=pointer]:
+          - /url: "#collapse-9"
+        - text:   
+    - list [ref=f1e57]:
+      - listitem [ref=f1e58]:
+        - generic [ref=f1e59]:
+          - text: Orders Completed
+          - generic [ref=f1e60]: 0%
+        - generic [ref=f1e61]:
+          - progressbar:
+            - generic: 0%
+      - listitem [ref=f1e62]:
+        - generic [ref=f1e63]:
+          - text: Orders Processing
+          - generic [ref=f1e64]: 0%
+        - generic [ref=f1e65]:
+          - progressbar:
+            - generic: 0%
+      - listitem [ref=f1e66]:
+        - generic [ref=f1e67]:
+          - text: Other Statuses
+          - generic [ref=f1e68]: 0%
+        - generic [ref=f1e69]:
+          - progressbar:
+            - generic: 0%
+  - generic [ref=f1e70]:
+    - generic [ref=f1e72]:
+      - button "Developer Setting" [ref=f1e74] [cursor=pointer]
+      - heading "Dashboard" [level=1] [ref=f1e76]
+      - list [ref=f1e77]:
+        - listitem [ref=f1e78]:
+          - link "Home" [ref=f1e79] [cursor=pointer]:
+            - /url: http://localhost/opencart/upload/admin/index.php?route=common/dashboard&user_token=b4515858ad6aa719008fef0485ea1b80
+        - listitem [ref=f1e80]:
+          - text: 
+          - link "Dashboard" [ref=f1e81] [cursor=pointer]:
+            - /url: http://localhost/opencart/upload/admin/index.php?route=common/dashboard&user_token=b4515858ad6aa719008fef0485ea1b80
+    - generic [ref=f1e82]:
+      - generic [ref=f1e83]:
+        - generic [ref=f1e85]:
+          - generic [ref=f1e86]:
+            - text: Total Orders
+            - generic [ref=f1e87]: 0%
+          - heading "0" [level=2] [ref=f1e90]
+          - link "View more..." [ref=f1e92] [cursor=pointer]:
+            - /url: http://localhost/opencart/upload/admin/index.php?route=sale/order&user_token=b4515858ad6aa719008fef0485ea1b80
+        - generic [ref=f1e94]:
+          - generic [ref=f1e95]:
+            - text: Total Sales
+            - generic [ref=f1e96]: 0%
+          - heading "0" [level=2] [ref=f1e99]
+          - link "View more..." [ref=f1e101] [cursor=pointer]:
+            - /url: http://localhost/opencart/upload/admin/index.php?route=sale/order&user_token=b4515858ad6aa719008fef0485ea1b80
+        - generic [ref=f1e103]:
+          - generic [ref=f1e104]:
+            - text: Total Customers
+            - generic [ref=f1e105]: 0%
+          - heading "14" [level=2] [ref=f1e108]
+          - link "View more..." [ref=f1e110] [cursor=pointer]:
+            - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer&user_token=b4515858ad6aa719008fef0485ea1b80
+        - generic [ref=f1e112]:
+          - generic [ref=f1e113]: People Online
+          - heading "0" [level=2] [ref=f1e116]
+          - link "View more..." [ref=f1e118] [cursor=pointer]:
+            - /url: http://localhost/opencart/upload/admin/index.php?route=report/online&user_token=b4515858ad6aa719008fef0485ea1b80
+      - generic [ref=f1e119]:
+        - generic [ref=f1e120]: World Map
+        - generic [ref=f1e128]:
+          - link [ref=f1e130] [cursor=pointer]:
+            - /url: "#"
+          - text: Sales Analytics

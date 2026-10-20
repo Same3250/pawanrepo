@@ -1,0 +1,311 @@
+- generic [ref=f2e2]:
+  - banner [ref=f2e3]:
+    - generic [ref=f2e4]:
+      - link [ref=f2e5] [cursor=pointer]:
+        - /url: http://localhost/opencart/upload/admin/index.php?route=common/dashboard&user_token=b4515858ad6aa719008fef0485ea1b80
+        - img "OpenCart" [ref=f2e6]
+      - list [ref=f2e7]:
+        - listitem [ref=f2e8]:
+          - link [ref=f2e9] [cursor=pointer]:
+            - /url: "#"
+        - listitem [ref=f2e11]:
+          - link [ref=f2e12] [cursor=pointer]:
+            - /url: en-gb
+            - img "English" [ref=f2e13]
+        - listitem [ref=f2e14]:
+          - link [ref=f2e15] [cursor=pointer]:
+            - /url: "#"
+            - img "John Doe" [ref=f2e16]
+            - generic [ref=f2e17]: John Doe
+        - listitem [ref=f2e19]:
+          - link "Logout" [ref=f2e20] [cursor=pointer]:
+            - /url: http://localhost/opencart/upload/admin/index.php?route=common/logout&user_token=b4515858ad6aa719008fef0485ea1b80
+  - navigation [ref=f2e22]:
+    - generic [ref=f2e23]: Navigation
+    - list [ref=f2e25]:
+      - listitem [ref=f2e26]:
+        - link "Dashboard" [ref=f2e27] [cursor=pointer]:
+          - /url: http://localhost/opencart/upload/admin/index.php?route=common/dashboard&user_token=b4515858ad6aa719008fef0485ea1b80
+      - listitem [ref=f2e29]:
+        - link "Catalog " [ref=f2e30] [cursor=pointer]:
+          - /url: "#collapse-1"
+        - text:                 
+      - listitem [ref=f2e32]:
+        - link "CMS " [ref=f2e33] [cursor=pointer]:
+          - /url: "#collapse-2"
+        - text:    
+      - listitem [ref=f2e35]:
+        - link "Extensions " [ref=f2e36] [cursor=pointer]:
+          - /url: "#collapse-3"
+        - text:       
+      - listitem [ref=f2e38]:
+        - link "Design " [ref=f2e39] [cursor=pointer]:
+          - /url: "#collapse-4"
+        - text:     
+      - listitem [ref=f2e41]:
+        - link "Sales " [ref=f2e42] [cursor=pointer]:
+          - /url: "#collapse-5"
+        - text:   
+      - listitem [ref=f2e44]:
+        - link "Customers " [ref=f2e45] [cursor=pointer]:
+          - /url: "#collapse-6"
+        - list [ref=f2e47]:
+          - listitem [ref=f2e48]:
+            - link "Customers" [ref=f2e49] [cursor=pointer]:
+              - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer&user_token=b4515858ad6aa719008fef0485ea1b80
+          - listitem [ref=f2e50]:
+            - link "Customer Groups" [ref=f2e51] [cursor=pointer]:
+              - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer_group&user_token=b4515858ad6aa719008fef0485ea1b80
+          - listitem [ref=f2e52]:
+            - link "Customer Approvals" [ref=f2e53] [cursor=pointer]:
+              - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer_approval&user_token=b4515858ad6aa719008fef0485ea1b80
+          - listitem [ref=f2e54]:
+            - link "GDPR" [ref=f2e55] [cursor=pointer]:
+              - /url: http://localhost/opencart/upload/admin/index.php?route=customer/gdpr&user_token=b4515858ad6aa719008fef0485ea1b80
+          - listitem [ref=f2e56]:
+            - link "Custom Fields" [ref=f2e57] [cursor=pointer]:
+              - /url: http://localhost/opencart/upload/admin/index.php?route=customer/custom_field&user_token=b4515858ad6aa719008fef0485ea1b80
+      - listitem [ref=f2e58]:
+        - link "Marketing " [ref=f2e59] [cursor=pointer]:
+          - /url: "#collapse-7"
+        - text:    
+      - listitem [ref=f2e61]:
+        - link "System " [ref=f2e62] [cursor=pointer]:
+          - /url: "#collapse-8"
+        - text:                                   
+      - listitem [ref=f2e64]:
+        - link "Reports " [ref=f2e65] [cursor=pointer]:
+          - /url: "#collapse-9"
+        - text:   
+    - list [ref=f2e68]:
+      - listitem [ref=f2e69]:
+        - generic [ref=f2e70]:
+          - text: Orders Completed
+          - generic [ref=f2e71]: 0%
+        - generic [ref=f2e72]:
+          - progressbar:
+            - generic: 0%
+      - listitem [ref=f2e73]:
+        - generic [ref=f2e74]:
+          - text: Orders Processing
+          - generic [ref=f2e75]: 0%
+        - generic [ref=f2e76]:
+          - progressbar:
+            - generic: 0%
+      - listitem [ref=f2e77]:
+        - generic [ref=f2e78]:
+          - text: Other Statuses
+          - generic [ref=f2e79]: 0%
+        - generic [ref=f2e80]:
+          - progressbar:
+            - generic: 0%
+  - generic [ref=f2e81]:
+    - generic [ref=f2e83]:
+      - generic [ref=f2e84]:
+        - link "Add New" [ref=f2e85] [cursor=pointer]:
+          - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer.form&user_token=b4515858ad6aa719008fef0485ea1b80
+        - button "Delete" [ref=f2e87] [cursor=pointer]
+      - heading "Customers" [level=1] [ref=f2e89]
+      - list [ref=f2e90]:
+        - listitem [ref=f2e91]:
+          - link "Home" [ref=f2e92] [cursor=pointer]:
+            - /url: http://localhost/opencart/upload/admin/index.php?route=common/dashboard&user_token=b4515858ad6aa719008fef0485ea1b80
+        - listitem [ref=f2e93]:
+          - text: 
+          - link "Customers" [ref=f2e94] [cursor=pointer]:
+            - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer&user_token=b4515858ad6aa719008fef0485ea1b80
+    - generic [ref=f2e96]:
+      - generic [ref=f2e98]:
+        - generic [ref=f2e99]: Filter
+        - generic [ref=f2e102]:
+          - generic [ref=f2e103]:
+            - generic [ref=f2e104]: Customer Name
+            - textbox "Customer Name" [ref=f2e105]
+          - generic [ref=f2e106]:
+            - generic [ref=f2e107]: E-Mail
+            - textbox "E-Mail" [ref=f2e108]
+          - generic [ref=f2e109]:
+            - generic [ref=f2e110]: Customer Group
+            - combobox "Customer Group" [ref=f2e111]:
+              - option [selected]
+              - option "Default"
+              - option "Retail"
+              - option "Wholesale"
+          - generic [ref=f2e112]:
+            - generic [ref=f2e113]: Status
+            - combobox "Status" [ref=f2e114]:
+              - option [selected]
+              - option "Enabled"
+              - option "Disabled"
+          - generic [ref=f2e115]:
+            - generic [ref=f2e116]: IP
+            - textbox "IP" [ref=f2e117]
+          - generic [ref=f2e118]:
+            - generic [ref=f2e119]: Date From
+            - textbox "Date From" [ref=f2e120]
+          - generic [ref=f2e121]:
+            - generic [ref=f2e122]: Date To
+            - textbox "Date To" [ref=f2e123]
+          - generic [ref=f2e124]:
+            - button "Filter" [ref=f2e125] [cursor=pointer]
+            - button "Reset" [ref=f2e127] [cursor=pointer]
+      - generic [ref=f2e130]:
+        - generic [ref=f2e131]: Customer List
+        - generic [ref=f2e134]:
+          - table [ref=f2e136]:
+            - rowgroup [ref=f2e137]:
+              - row [ref=f2e138]:
+                - columnheader [ref=f2e139]:
+                  - checkbox [ref=f2e140]
+                - columnheader [ref=f2e141]:
+                  - link "Customer Name " [ref=f2e142] [cursor=pointer]:
+                    - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer.list&user_token=b4515858ad6aa719008fef0485ea1b80&sort=name&order=DESC
+                - columnheader [ref=f2e143]:
+                  - link "E-Mail" [ref=f2e144] [cursor=pointer]:
+                    - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer.list&user_token=b4515858ad6aa719008fef0485ea1b80&sort=c.email&order=DESC
+                - columnheader [ref=f2e145]:
+                  - link "Customer Group" [ref=f2e146] [cursor=pointer]:
+                    - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer.list&user_token=b4515858ad6aa719008fef0485ea1b80&sort=customer_group&order=DESC
+                - columnheader [ref=f2e147]:
+                  - link "Date Added" [ref=f2e148] [cursor=pointer]:
+                    - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer.list&user_token=b4515858ad6aa719008fef0485ea1b80&sort=c.date_added&order=DESC
+                - columnheader "Action" [ref=f2e149]
+            - rowgroup [ref=f2e150]:
+              - row [ref=f2e151]:
+                - cell [ref=f2e152]:
+                  - checkbox [ref=f2e153]
+                - cell "Amy Huel" [ref=f2e154]
+                - cell "cameron.pfannerstill1792447285866@gmail.com" [ref=f2e155]
+                - cell "Default" [ref=f2e156]
+                - cell "19/10/2026" [ref=f2e157]
+                - cell [ref=f2e158]:
+                  - generic [ref=f2e159]:
+                    - link "Edit" [ref=f2e160] [cursor=pointer]:
+                      - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer.form&user_token=b4515858ad6aa719008fef0485ea1b80&customer_id=9
+                    - button [ref=f2e162] [cursor=pointer]
+              - row [ref=f2e164]:
+                - cell [ref=f2e165]:
+                  - checkbox [ref=f2e166]
+                - cell "Antonio Trantow" [ref=f2e167]
+                - cell "bonita87+1792446419576@gmail.com" [ref=f2e168]
+                - cell "Default" [ref=f2e169]
+                - cell "19/10/2026" [ref=f2e170]
+                - cell [ref=f2e171]:
+                  - generic [ref=f2e172]:
+                    - link "Edit" [ref=f2e173] [cursor=pointer]:
+                      - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer.form&user_token=b4515858ad6aa719008fef0485ea1b80&customer_id=3
+                    - button [ref=f2e175] [cursor=pointer]
+              - row [ref=f2e177]:
+                - cell [ref=f2e178]:
+                  - checkbox [ref=f2e179]
+                - cell "Britney Collier" [ref=f2e180]
+                - cell "vaughn72+1792446807359@gmail.com" [ref=f2e181]
+                - cell "Default" [ref=f2e182]
+                - cell "19/10/2026" [ref=f2e183]
+                - cell [ref=f2e184]:
+                  - generic [ref=f2e185]:
+                    - link "Edit" [ref=f2e186] [cursor=pointer]:
+                      - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer.form&user_token=b4515858ad6aa719008fef0485ea1b80&customer_id=6
+                    - button [ref=f2e188] [cursor=pointer]
+              - row [ref=f2e190]:
+                - cell [ref=f2e191]:
+                  - checkbox [ref=f2e192]
+                - cell "Cara Schulist" [ref=f2e193]
+                - cell "adolfo.morissette18+1792446266353@gmail.com" [ref=f2e194]
+                - cell "Default" [ref=f2e195]
+                - cell "19/10/2026" [ref=f2e196]
+                - cell [ref=f2e197]:
+                  - generic [ref=f2e198]:
+                    - link "Edit" [ref=f2e199] [cursor=pointer]:
+                      - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer.form&user_token=b4515858ad6aa719008fef0485ea1b80&customer_id=2
+                    - button [ref=f2e201] [cursor=pointer]
+              - row [ref=f2e203]:
+                - cell [ref=f2e204]:
+                  - checkbox [ref=f2e205]
+                - cell "Chesley McClure" [ref=f2e206]
+                - cell "dakota.luettgen1792448005033@yahoo.com" [ref=f2e207]
+                - cell "Default" [ref=f2e208]
+                - cell "19/10/2026" [ref=f2e209]
+                - cell [ref=f2e210]:
+                  - generic [ref=f2e211]:
+                    - link "Edit" [ref=f2e212] [cursor=pointer]:
+                      - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer.form&user_token=b4515858ad6aa719008fef0485ea1b80&customer_id=11
+                    - button [ref=f2e214] [cursor=pointer]
+              - row [ref=f2e216]:
+                - cell [ref=f2e217]:
+                  - checkbox [ref=f2e218]
+                - cell "Ernesto Schamberger" [ref=f2e219]
+                - cell "fae.franey461792448365872@hotmail.com" [ref=f2e220]
+                - cell "Default" [ref=f2e221]
+                - cell "19/10/2026" [ref=f2e222]
+                - cell [ref=f2e223]:
+                  - generic [ref=f2e224]:
+                    - link "Edit" [ref=f2e225] [cursor=pointer]:
+                      - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer.form&user_token=b4515858ad6aa719008fef0485ea1b80&customer_id=14
+                    - button [ref=f2e227] [cursor=pointer]
+              - row [ref=f2e229]:
+                - cell [ref=f2e230]:
+                  - checkbox [ref=f2e231]
+                - cell "Judah Osinski" [ref=f2e232]
+                - cell "lucio.kilback1792448206345@gmail.com" [ref=f2e233]
+                - cell "Default" [ref=f2e234]
+                - cell "19/10/2026" [ref=f2e235]
+                - cell [ref=f2e236]:
+                  - generic [ref=f2e237]:
+                    - link "Edit" [ref=f2e238] [cursor=pointer]:
+                      - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer.form&user_token=b4515858ad6aa719008fef0485ea1b80&customer_id=12
+                    - button [ref=f2e240] [cursor=pointer]
+              - row [ref=f2e242]:
+                - cell [ref=f2e243]:
+                  - checkbox [ref=f2e244]
+                - cell "Lambert Kuphal" [ref=f2e245]
+                - cell "reyes49+1792447056194@hotmail.com" [ref=f2e246]
+                - cell "Default" [ref=f2e247]
+                - cell "19/10/2026" [ref=f2e248]
+                - cell [ref=f2e249]:
+                  - generic [ref=f2e250]:
+                    - link "Edit" [ref=f2e251] [cursor=pointer]:
+                      - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer.form&user_token=b4515858ad6aa719008fef0485ea1b80&customer_id=8
+                    - button [ref=f2e253] [cursor=pointer]
+              - row [ref=f2e255]:
+                - cell [ref=f2e256]:
+                  - checkbox [ref=f2e257]
+                - cell "Maria Goyette" [ref=f2e258]
+                - cell "merl_lebsack+1792446530282@hotmail.com" [ref=f2e259]
+                - cell "Default" [ref=f2e260]
+                - cell "19/10/2026" [ref=f2e261]
+                - cell [ref=f2e262]:
+                  - generic [ref=f2e263]:
+                    - link "Edit" [ref=f2e264] [cursor=pointer]:
+                      - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer.form&user_token=b4515858ad6aa719008fef0485ea1b80&customer_id=4
+                    - button [ref=f2e266] [cursor=pointer]
+              - row [ref=f2e268]:
+                - cell [ref=f2e269]:
+                  - checkbox [ref=f2e270]
+                - cell "Martine Hirthe" [ref=f2e271]
+                - cell "alexandrea411792448274750@hotmail.com" [ref=f2e272]
+                - cell "Default" [ref=f2e273]
+                - cell "19/10/2026" [ref=f2e274]
+                - cell [ref=f2e275]:
+                  - generic [ref=f2e276]:
+                    - link "Edit" [ref=f2e277] [cursor=pointer]:
+                      - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer.form&user_token=b4515858ad6aa719008fef0485ea1b80&customer_id=13
+                    - button [ref=f2e279] [cursor=pointer]
+          - generic [ref=f2e281]:
+            - list [ref=f2e283]:
+              - listitem [ref=f2e284]:
+                - generic [ref=f2e285]: "1"
+              - listitem [ref=f2e286]:
+                - link "2" [ref=f2e287] [cursor=pointer]:
+                  - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer.list&user_token=b4515858ad6aa719008fef0485ea1b80&page=2
+              - listitem [ref=f2e288]:
+                - link ">" [ref=f2e289] [cursor=pointer]:
+                  - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer.list&user_token=b4515858ad6aa719008fef0485ea1b80&page=2
+              - listitem [ref=f2e290]:
+                - link ">|" [ref=f2e291] [cursor=pointer]:
+                  - /url: http://localhost/opencart/upload/admin/index.php?route=customer/customer.list&user_token=b4515858ad6aa719008fef0485ea1b80&page=2
+            - generic [ref=f2e292]: Showing 1 to 10 of 14 (2 Pages)
+  - contentinfo [ref=f2e293]:
+    - link "OpenCart" [ref=f2e294] [cursor=pointer]:
+      - /url: https://www.opencart.com
+    - text: © 2009-2026 All Rights Reserved.Version 4.1.0.4
