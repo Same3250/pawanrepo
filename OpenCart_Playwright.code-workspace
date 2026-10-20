@@ -1,0 +1,10 @@
+{
+  "folders": [
+    {
+      "path": "OpenCart_Playwright"
+    }
+  ],
+  "settings": {
+    "playwright.showTrace": true
+  }
+}
