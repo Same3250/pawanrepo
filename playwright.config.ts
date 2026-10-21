@@ -13,7 +13,7 @@ export default defineConfig({
     ["html", { open: "never", outputFolder: "reports" }], // HTML Report
     //['json', { outputFile: 'reports/results.json' }], // JSON Report
     ["junit", { outputFile: "reports/results.xml" }], // JUnit XML Report
-    ["./utils/CustomReporter.ts"], // Custom reporter
+    ["./OpenCart_Playwright/utils/CustomReporter.ts"], // Custom reporter
     ["allure-playwright", { outputFolder: "allure-results" }], // Allure Report
   ],
   use: {
