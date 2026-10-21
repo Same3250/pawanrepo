@@ -20,14 +20,12 @@ on:
           - test:api
           - test:web
           - test:datadriven
-        default: "test:e2e"
+        default: "test:api"
       browser:
         description: "Select browser"
         type: choice
         options:
           - chromium
-          - firefox
-          - webkit
         default: "chromium"
       mode:
         description: "Run mode"
@@ -58,26 +56,57 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: ⚙️ Create .env File
-        run: Copy-Item .env.example .env
+        run: Copy-Item OpenCart_Playwright/utils/.env.example OpenCart_Playwright/.env
 
       - name: 🧪 Run Playwright Tests
         run: |
-          $suite = "${{ github.event.inputs.test_suite || 'test:e2e' }}"
+          $suite = "${{ github.event.inputs.test_suite || 'test:api' }}"
           $browser = "${{ github.event.inputs.browser || 'chromium' }}"
           $mode = "${{ github.event.inputs.mode || 'headless' }}"
           $tag = $suite -replace 'test:', ''
+          if ($tag -eq 'e2e') {
+            $tag = 'end-to-end'
+            $requiredSecrets = @(
+              'WEB_APP_URL',
+              'ADMIN_USERNAME',
+              'ADMIN_PASSWORD',
+              'DB_HOST',
+              'DB_USER',
+              'DB_NAME',
+              'DB_PORT'
+            )
+            $missingSecrets = @($requiredSecrets | Where-Object {
+              [string]::IsNullOrWhiteSpace([Environment]::GetEnvironmentVariable($_))
+            })
+            if ($missingSecrets.Count -gt 0) {
+              throw "E2E run requires repository secrets: $($missingSecrets -join ', ')."
+            }
+          }
           $browserFlag = "--project=$browser"
           $modeFlag = if ($mode -eq 'headed') { '--headed' } else { '' }
-          npx playwright test --grep "@$tag" $browserFlag $modeFlag --reporter=dot --output=test-results
+          Push-Location OpenCart_Playwright
+          try {
+            npx playwright test --grep "@$tag" $browserFlag $modeFlag --reporter=dot --output=../test-results
+          } finally {
+            Pop-Location
+          }
         env:
           CI: "1"
+          WEB_APP_URL: ${{ secrets.WEB_APP_URL }}
+          ADMIN_USERNAME: ${{ secrets.ADMIN_USERNAME }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          DB_HOST: ${{ secrets.DB_HOST }}
+          DB_USER: ${{ secrets.DB_USER }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_NAME: ${{ secrets.DB_NAME }}
+          DB_PORT: ${{ secrets.DB_PORT }}
 
       - name: 📊 Upload Playwright HTML Report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
-          path: reports/
+          path: OpenCart_Playwright/reports/
           retention-days: 30
 
       - name: 📋 Upload Custom Report
@@ -85,7 +114,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: custom-report
-          path: custom-report/
+          path: OpenCart_Playwright/custom-report/
           retention-days: 30
 
       - name: 📈 Upload Allure Results
@@ -93,5 +122,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: allure-results
-          path: allure-results/
+          path: OpenCart_Playwright/allure-results/
           retention-days: 30
