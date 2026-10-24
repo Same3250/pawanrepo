@@ -20,7 +20,7 @@ pipeline {
     git 'Default'
   }
   options { timestamps() }
-  parameters { 
+  parameters {
     choice(
       name: 'TEST_SUITE',
       choices: ['test:e2e', 'test:master', 'test:sanity', 'test:regression', 'test:api', 'test:web', 'test:datadriven'],
