@@ -800,6 +800,16 @@ Make sure you have **Docker Desktop** installed:
 
 - After installing, launch Docker Desktop and wait for the whale icon to stop animating.
 
+### Verify Docker is working
+
+Open a terminal and run:
+
+```bash
+docker --version
+```
+
+You should see something like: `Docker version 29.9.2, build afdd53b`
+
 ## Files to be created
 
 | File                   | What It Does                                                                                                                                           |
