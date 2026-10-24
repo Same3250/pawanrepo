@@ -17,7 +17,7 @@ Pipeline Stages:
 pipeline {
   agent any
   tools {
-    git 'https://github.com/pawan3250/Framework_DB_Automation_V1.git'
+    git 'Default'
   }
   options { timestamps() }
   parameters { 
