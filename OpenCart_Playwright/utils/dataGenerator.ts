@@ -184,4 +184,47 @@ export class RandomDataUtil {
       ],
     };
   }
+
+  static generatePetstorePetPayload(id: number) {
+    return {
+      id,
+      category: {
+        id: RandomDataUtil.getNumber(),
+        name: RandomDataUtil.getDepartment(),
+      },
+      name: RandomDataUtil.getProductName(),
+      photoUrls: [RandomDataUtil.getImageUrl()],
+      tags: [
+        {
+          id: RandomDataUtil.getNumber(),
+          name: "automation",
+        },
+      ],
+      status: "available",
+    };
+  }
+
+  static generatePetstoreUserPayload() {
+    return {
+      id: Date.now(),
+      username: `${RandomDataUtil.getUsername()}-${Date.now()}`,
+      firstName: RandomDataUtil.getFirstName(),
+      lastName: RandomDataUtil.getLastName(),
+      email: RandomDataUtil.getEmail(),
+      password: RandomDataUtil.getPassword(),
+      phone: RandomDataUtil.getPhoneNumber(),
+      userStatus: 0,
+    };
+  }
+
+  static generatePetstoreOrderPayload(id: number, petId: number) {
+    return {
+      id,
+      petId,
+      quantity: RandomDataUtil.getNumber(),
+      shipDate: new Date().toISOString(),
+      status: "placed",
+      complete: false,
+    };
+  }
 }

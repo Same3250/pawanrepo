@@ -1,0 +1,19 @@
+Case ID,Area,Method,Endpoint,Scenario,Observed or expected result
+PET-01,Pet,GET,/pet/findByStatus,Search all documented status values (available pending sold),HTTP 200 array; matching statuses and Pet schema
+PET-02,Pet,GET,/pet/findByStatus,Unknown status edge case,Live service returned HTTP 200 array although Swagger documents status enum
+PET-03,Pet,GET,/pet/findByStatus,Missing required status query,Live service returned HTTP 200 array rather than documented validation error
+PET-04,Pet,GET,/pet/findByTags,Unique non-matching tag,HTTP 200 empty array
+PET-05,Pet,GET,/pet/findByTags,Missing required tags query,Live service returned HTTP 200 array rather than documented validation error
+PET-06,Pet,GET,/pet/{petId},Fetch a known pet and validate response schema,HTTP 200; returned ID matches
+PET-07,Pet,GET,/pet/{petId},Unknown numeric and malformed IDs,Live service returned HTTP 404 with ApiResponse body
+PET-08,Pet,POST PUT POST DELETE,/pet and /pet/{petId},Create update form update upload image and delete generated pet,HTTP 200 for successful operations; cleanup generated pet
+STORE-01,Store,GET,/store/inventory,Validate inventory response and count values,HTTP 200 object with non-negative integer counts
+STORE-02,Store,POST GET DELETE,/store/order and /store/order/{orderId},Create fetch and delete generated order,HTTP 200 including generated order ID beyond the documented retrieval range 1-10; cleanup generated order
+STORE-04,Store,GET,/store/order/{orderId},Retrieve the seeded order with observed ID 1,HTTP 200; Order schema
+STORE-03,Store,GET DELETE,/store/order/{orderId},Unknown numeric and malformed IDs,Live service returned HTTP 404 with ApiResponse body
+USER-01,User,POST GET PUT GET GET DELETE,/user and /user/{username} and /user/login and /user/logout,Create fetch update login logout and delete generated user,HTTP 200 for successful operations; cleanup generated user
+USER-02,User,GET,/user/{username},Unknown username,HTTP 404 with ApiResponse body
+USER-03,User,POST,/user/createWithArray and /user/createWithList,Create users using both batch endpoints,HTTP 200 with ApiResponse; cleanup generated users
+USER-04,User,GET,/user/login,Missing required username/password query,Live service returned HTTP 200 session response instead of rejecting missing query
+PET-09,Pet,GET,/pet/findByStatus,Search using multiple documented status values,HTTP 200 array; each result uses one requested status
+PET-10,Pet,GET,/pet/findByTags,Search using a tag obtained from a live pet response,HTTP 200 array; returned pets match requested tag

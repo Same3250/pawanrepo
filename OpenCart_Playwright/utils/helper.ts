@@ -13,8 +13,8 @@ export class Helper {
 
   static getLoginDetails() {
     return {
-      email: "pavanol@xyz.com",
-      password: "test@123",
+      email: process.env.APP_EMAIL || "YOUR_APP_EMAIL",
+      password: process.env.APP_PASSWORD || "YOUR_APP_PASSWORD",
     };
   }
 }

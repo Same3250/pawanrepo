@@ -2,6 +2,26 @@
 export const Routes = {
 
     BASE_URL: 'https://fakestoreapi.com',
+    PETSTORE_BASE_URL: 'https://petstore.swagger.io/v2',
+
+    // =========================
+    // Petstore Routes
+    // =========================
+
+    PETSTORE_UPLOAD_PET_IMAGE: '/pet/{petId}/uploadImage',
+    PETSTORE_PETS: '/pet',
+    PETSTORE_PETS_BY_STATUS: '/pet/findByStatus',
+    PETSTORE_PETS_BY_TAGS: '/pet/findByTags',
+    PETSTORE_PET_BY_ID: '/pet/{petId}',
+    PETSTORE_INVENTORY: '/store/inventory',
+    PETSTORE_ORDERS: '/store/order',
+    PETSTORE_ORDER_BY_ID: '/store/order/{orderId}',
+    PETSTORE_USERS_CREATE_WITH_LIST: '/user/createWithList',
+    PETSTORE_USERS: '/user',
+    PETSTORE_USER_BY_NAME: '/user/{username}',
+    PETSTORE_USER_LOGIN: '/user/login',
+    PETSTORE_USER_LOGOUT: '/user/logout',
+    PETSTORE_USERS_CREATE_WITH_ARRAY: '/user/createWithArray',
 
     // =========================
     // Product Routes
@@ -49,4 +69,3 @@ export const Routes = {
 
     AUTH_LOGIN: '/auth/login'
 }
-

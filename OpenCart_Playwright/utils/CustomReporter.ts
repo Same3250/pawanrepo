@@ -121,6 +121,7 @@ class CustomReporter implements Reporter {
     private startTime: Date = new Date();
     private endTime: Date = new Date();
     private outputFile: string = 'custom-report/index.html';
+    private reportDirectory: string = 'custom-report';
     private runId: string = '';
     private testStepsMap: Map<string, StepData[]> = new Map();
     private testStartTimeMap: Map<string, number> = new Map();
@@ -132,7 +133,8 @@ class CustomReporter implements Reporter {
     onBegin(config: FullConfig, suite: Suite): void {
         const now = new Date();
         this.runId = `${now.getFullYear()}${String(now.getMonth() + 1).padStart(2, '0')}${String(now.getDate()).padStart(2, '0')}_${String(now.getHours()).padStart(2, '0')}${String(now.getMinutes()).padStart(2, '0')}${String(now.getSeconds()).padStart(2, '0')}`;
-        this.outputFile = `custom-report/report_${this.runId}.html`;
+        this.reportDirectory = process.env.CUSTOM_REPORT_DIR || 'custom-report';
+        this.outputFile = path.join(this.reportDirectory, `report_${this.runId}.html`);
         this.config = config;
         this.startTime = new Date();
         const totalTests = suite.allTests().length;
@@ -280,7 +282,7 @@ class CustomReporter implements Reporter {
         for (const attachment of result.attachments) {
             if (attachment.contentType === 'image/png') {
                 const screenshotName = `screenshot_${this.testCounter}_${screenshots.length + 1}.png`;
-                const destPath = path.join('custom-report', 'screenshots', screenshotName);
+                const destPath = path.join(this.reportDirectory, 'screenshots', screenshotName);
                 const destDir = path.dirname(destPath);
                 if (!fs.existsSync(destDir)) {
                     fs.mkdirSync(destDir, { recursive: true });
@@ -302,7 +304,7 @@ class CustomReporter implements Reporter {
 
             if (attachment.contentType === 'video/webm' && attachment.path) {
                 const videoName = `video_${this.testCounter}.webm`;
-                const destPath = path.join('custom-report', 'videos', videoName);
+                const destPath = path.join(this.reportDirectory, 'videos', videoName);
                 const destDir = path.dirname(destPath);
                 if (!fs.existsSync(destDir)) {
                     fs.mkdirSync(destDir, { recursive: true });
@@ -317,7 +319,7 @@ class CustomReporter implements Reporter {
 
             if (attachment.name === 'trace' && attachment.path) {
                 const traceName = `trace_${this.testCounter}.zip`;
-                const destPath = path.join('custom-report', 'traces', traceName);
+                const destPath = path.join(this.reportDirectory, 'traces', traceName);
                 const destDir = path.dirname(destPath);
                 if (!fs.existsSync(destDir)) {
                     fs.mkdirSync(destDir, { recursive: true });
@@ -2453,4 +2455,3 @@ class CustomReporter implements Reporter {
 }
 
 export default CustomReporter;
-

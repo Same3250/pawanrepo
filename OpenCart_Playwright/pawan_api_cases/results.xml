@@ -1,0 +1,67 @@
+<testsuites id="" name="" tests="18" failures="1" skipped="0" errors="0" time="34.143603999999996">
+<testsuite name="api\petstore.spec.ts" timestamp="2026-10-28T21:47:06.911Z" hostname="chromium" tests="18" failures="1" skipped="0" time="45.847" errors="0">
+<testcase name="Swagger Petstore API Tests › PET-01 GET - Search by every documented status @master @sanity @api" classname="api\petstore.spec.ts" time="12.193">
+</testcase>
+<testcase name="Swagger Petstore API Tests › PET-09 GET - Search using multiple documented statuses @master @regression @api" classname="api\petstore.spec.ts" time="8.884">
+</testcase>
+<testcase name="Swagger Petstore API Tests › PET-02 GET - Characterize an undocumented status value @master @regression @api" classname="api\petstore.spec.ts" time="0.906">
+</testcase>
+<testcase name="Swagger Petstore API Tests › PET-03 GET - Missing status query behavior @master @regression @api" classname="api\petstore.spec.ts" time="0.926">
+</testcase>
+<testcase name="Swagger Petstore API Tests › PET-04 GET - Search with a non-matching tag @master @regression @api" classname="api\petstore.spec.ts" time="0.877">
+</testcase>
+<testcase name="Swagger Petstore API Tests › PET-05 GET - Missing tags query behavior @master @regression @api" classname="api\petstore.spec.ts" time="0.89">
+</testcase>
+<testcase name="Swagger Petstore API Tests › PET-10 GET - Search using a tag returned by the API @master @regression @api" classname="api\petstore.spec.ts" time="2.135">
+</testcase>
+<testcase name="Swagger Petstore API Tests › PET-06 GET - Retrieve a known pet and validate its schema @master @sanity @api" classname="api\petstore.spec.ts" time="1.907">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|test-results\api-petstore-Swagger-Petst-bd8b8-ts-schema-master-sanity-api-chromium\error-context.md]]
+]]>
+</system-out>
+<failure message="Known pet lookup should return HTTP 200" type="expect.toBe">
+<![CDATA[  [chromium] › api\petstore.spec.ts:208:7 › Swagger Petstore API Tests › PET-06 GET - Retrieve a known pet and validate its schema @master @sanity @api 
+
+    Error: Known pet lookup should return HTTP 200
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 200
+    Received: 404
+
+      219 |     const selectedPet = pets[0];
+      220 |     const response = await request.get(`${BASE_URL}${petRoute(selectedPet.id)}`);
+    > 221 |     expect(response.status(), "Known pet lookup should return HTTP 200").toBe(200);
+          |                                                                          ^
+      222 |
+      223 |     const pet: PetstorePet = await response.json();
+      224 |     expect(pet.id, "The detail ID should match the selected pet").toBe(selectedPet.id);
+        at C:\PlaywrightProject\Framework_DB_Automation\OpenCart_Playwright\tests\api\petstore.spec.ts:221:74
+
+    Error Context: ..\pawan_api_cases\test-results\api-petstore-Swagger-Petst-bd8b8-ts-schema-master-sanity-api-chromium\error-context.md
+]]>
+</failure>
+</testcase>
+<testcase name="Swagger Petstore API Tests › PET-07 GET - Unknown and malformed pet IDs @master @regression @api" classname="api\petstore.spec.ts" time="1.261">
+</testcase>
+<testcase name="Swagger Petstore API Tests › PET-08 POST / PUT / form POST / upload / DELETE - Pet workflow @master @regression @api" classname="api\petstore.spec.ts" time="3.588">
+</testcase>
+<testcase name="Swagger Petstore API Tests › STORE-01 GET - Inventory response contains non-negative integer counts @master @sanity @api" classname="api\petstore.spec.ts" time="0.953">
+</testcase>
+<testcase name="Swagger Petstore API Tests › STORE-02 POST / GET / DELETE - Order workflow @master @regression @api" classname="api\petstore.spec.ts" time="2.059">
+</testcase>
+<testcase name="Swagger Petstore API Tests › STORE-03 GET / DELETE - Unknown and malformed order IDs @master @regression @api" classname="api\petstore.spec.ts" time="1.593">
+</testcase>
+<testcase name="Swagger Petstore API Tests › STORE-04 GET - Retrieve the observed seeded order @master @sanity @api" classname="api\petstore.spec.ts" time="0.94">
+</testcase>
+<testcase name="Swagger Petstore API Tests › USER-01 POST / GET / PUT / login / logout / DELETE - User workflow @master @regression @api" classname="api\petstore.spec.ts" time="2.094">
+</testcase>
+<testcase name="Swagger Petstore API Tests › USER-02 GET - Unknown username returns the documented not-found response @master @regression @api" classname="api\petstore.spec.ts" time="1.089">
+</testcase>
+<testcase name="Swagger Petstore API Tests › USER-03 POST - Create users with array and list operations @master @regression @api" classname="api\petstore.spec.ts" time="2.663">
+</testcase>
+<testcase name="Swagger Petstore API Tests › USER-04 GET - Login with missing required query parameters @master @regression @api" classname="api\petstore.spec.ts" time="0.889">
+</testcase>
+</testsuite>
+</testsuites>

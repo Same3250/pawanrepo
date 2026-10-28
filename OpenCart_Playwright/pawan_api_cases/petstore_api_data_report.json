@@ -1,0 +1,111 @@
+{
+  "sourceUrl": "https://petstore.swagger.io/#/",
+  "openApiDocumentUrl": "https://petstore.swagger.io/v2/swagger.json",
+  "specification": "Swagger 2.0",
+  "apiTitle": "Swagger Petstore",
+  "apiVersion": "1.0.7",
+  "host": "petstore.swagger.io",
+  "basePath": "/v2",
+  "securityDefinitions": {
+    "api_key": {
+      "type": "apiKey",
+      "name": "api_key",
+      "in": "header"
+    },
+    "petstore_auth": {
+      "type": "oauth2",
+      "authorizationUrl": "https://petstore.swagger.io/oauth/authorize",
+      "flow": "implicit",
+      "scopes": {
+        "read:pets": "read your pets",
+        "write:pets": "modify your pets in your account"
+      }
+    }
+  },
+  "operationsFromSwagger": [
+    "POST /pet/{petId}/uploadImage",
+    "POST /pet",
+    "PUT /pet",
+    "GET /pet/findByStatus",
+    "GET /pet/findByTags",
+    "GET /pet/{petId}",
+    "POST /pet/{petId}",
+    "DELETE /pet/{petId}",
+    "GET /store/inventory",
+    "POST /store/order",
+    "GET /store/order/{orderId}",
+    "DELETE /store/order/{orderId}",
+    "POST /user/createWithList",
+    "GET /user/{username}",
+    "PUT /user/{username}",
+    "DELETE /user/{username}",
+    "GET /user/login",
+    "GET /user/logout",
+    "POST /user/createWithArray",
+    "POST /user"
+  ],
+  "modelsFromSwagger": {
+    "Pet": {
+      "required": ["name", "photoUrls"],
+      "properties": ["id", "category", "name", "photoUrls", "tags", "status"],
+      "statusValues": ["available", "pending", "sold"]
+    },
+    "Order": {
+      "properties": ["id", "petId", "quantity", "shipDate", "status", "complete"],
+      "statusValues": ["placed", "approved", "delivered"]
+    },
+    "User": {
+      "properties": [
+        "id",
+        "username",
+        "firstName",
+        "lastName",
+        "email",
+        "password",
+        "phone",
+        "userStatus"
+      ]
+    },
+    "ApiResponse": {
+      "properties": ["code", "type", "message"]
+    }
+  },
+  "LiveEdgeCaseObservations": [
+    {
+      "request": "GET /pet/findByStatus with unknown status",
+      "status": 200,
+      "bodyType": "array",
+      "note": "The live demo accepted a value outside the documented status enum and returned a pet carrying that value."
+    },
+    {
+      "request": "GET /pet/findByStatus without status",
+      "status": 200,
+      "bodyType": "array",
+      "note": "The live demo did not reject the missing required query parameter."
+    },
+    {
+      "request": "GET /pet/findByTags without tags",
+      "status": 200,
+      "bodyType": "array",
+      "note": "The live demo did not reject the missing required query parameter."
+    },
+    {
+      "request": "GET /user/login without username or password",
+      "status": 200,
+      "bodyType": "ApiResponse",
+      "note": "The live demo returned a session response despite missing required query parameters."
+    },
+    {
+      "request": "GET /pet/not-a-number and GET /store/order/not-a-number",
+      "status": 404,
+      "bodyType": "ApiResponse",
+      "note": "The live demo returned 404 for malformed numeric path parameters."
+    },
+    {
+      "request": "GET /store/order/{orderId} with a generated ID greater than 10",
+      "status": 200,
+      "bodyType": "Order",
+      "note": "The live demo accepted an ID outside the documented 1-10 retrieval range."
+    }
+  ]
+}

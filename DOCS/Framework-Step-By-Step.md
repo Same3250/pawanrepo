@@ -1093,7 +1093,7 @@ pipeline {
               <a href="${env.BUILD_URL}Custom_20Test_20Report">Open Custom Report</a>
             </p>
         """,
-        to: "pavanoltraining@gmail.com",
+        to: "YOUR_EMAIL@example.com",
         mimeType: "text/html"
       )
     }
@@ -1266,7 +1266,7 @@ pipeline {
             </a>
           </p>
         """,
-        to: "pavanoltraining@gmail.com",
+        to: "YOUR_EMAIL@example.com",
         mimeType: "text/html"
       )
     }
