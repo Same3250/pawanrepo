@@ -37,7 +37,7 @@ type PetstoreUser = {
   userStatus: number;
 };
 
-test.describe("Swagger Petstore API Tests", () => {
+test.describe("Swagger Petstore API Tests @pawan_api", () => {
   // ---------------------------------------------------------
   // Configuration
   // ---------------------------------------------------------

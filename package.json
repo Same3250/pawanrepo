@@ -25,6 +25,7 @@
   },
   "scripts": {
     "test:api": "playwright test --grep @api",
+    "test:pawan_api": "cd OpenCart_Playwright && playwright test --grep @pawan_api",
     "test:web": "playwright test --grep @web",
     "test:master": "playwright test --grep @master",
     "test:sanity": "playwright test --grep @sanity",

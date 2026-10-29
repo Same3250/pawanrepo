@@ -18,6 +18,7 @@ on:
           - test:regression
           - test:e2e
           - test:api
+          - test:pawan_api
           - test:web
           - test:datadriven
         default: "test:api"
