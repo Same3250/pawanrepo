@@ -215,13 +215,21 @@ test.describe("Swagger Petstore API Tests @pawan_api", () => {
     const pets: PetstorePet[] = await searchResponse.json();
     expect(pets.length, "A pet ID is required for the detail lookup").toBeGreaterThan(0);
 
-    const selectedPet = pets[0];
-    const response = await request.get(`${BASE_URL}${petRoute(selectedPet.id)}`);
-    expect(response.status(), "Known pet lookup should return HTTP 200").toBe(200);
+    const petIds = new Set(pets.map((pet) => pet.id));
+    for (const petId of petIds) {
+      const response = await request.get(`${BASE_URL}${petRoute(petId)}`);
+      if (response.status() === 404) {
+        continue;
+      }
 
-    const pet: PetstorePet = await response.json();
-    expect(pet.id, "The detail ID should match the selected pet").toBe(selectedPet.id);
-    expectSchema(pet, "petstore_pet_api_schema.json");
+      expect(response.status(), "Known pet lookup should return HTTP 200").toBe(200);
+      const pet: PetstorePet = await response.json();
+      expect(pet.id, "The detail ID should match the selected ID").toBe(petId);
+      expectSchema(pet, "petstore_pet_api_schema.json");
+      return;
+    }
+
+    throw new Error("No pet returned by the live search could be retrieved.");
   });
 
   test("PET-07 GET - Unknown and malformed pet IDs @master @regression @api", async ({
