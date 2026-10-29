@@ -132,8 +132,9 @@ export const petstoreApiTestCases = [
     area: "Store",
     methods: ["GET"],
     endpoints: ["/store/order/{orderId}"],
-    scenario: "Retrieve the seeded order whose ID was observed as 1.",
-    expectedOrObservedResult: "HTTP 200; response matches the Order schema.",
+    scenario: "Check whether example order ID 1 exists in the live demo service.",
+    expectedOrObservedResult:
+      "HTTP 200 with the Order schema when present, or HTTP 404 with an ApiResponse when absent.",
   },
   {
     id: "USER-01",

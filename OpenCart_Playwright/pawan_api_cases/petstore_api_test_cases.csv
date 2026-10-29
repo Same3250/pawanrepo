@@ -9,7 +9,7 @@ PET-07,Pet,GET,/pet/{petId},Unknown numeric and malformed IDs,Live service retur
 PET-08,Pet,POST PUT POST DELETE,/pet and /pet/{petId},Create update form update upload image and delete generated pet,HTTP 200 for successful operations; cleanup generated pet
 STORE-01,Store,GET,/store/inventory,Validate inventory response and count values,HTTP 200 object with non-negative integer counts
 STORE-02,Store,POST GET DELETE,/store/order and /store/order/{orderId},Create fetch and delete generated order,HTTP 200 including generated order ID beyond the documented retrieval range 1-10; cleanup generated order
-STORE-04,Store,GET,/store/order/{orderId},Retrieve the seeded order with observed ID 1,HTTP 200; Order schema
+STORE-04,Store,GET,/store/order/{orderId},Check whether example order ID 1 exists in the live demo service,HTTP 200 with Order schema when present or HTTP 404 with ApiResponse when absent
 STORE-03,Store,GET DELETE,/store/order/{orderId},Unknown numeric and malformed IDs,Live service returned HTTP 404 with ApiResponse body
 USER-01,User,POST GET PUT GET GET DELETE,/user and /user/{username} and /user/login and /user/logout,Create fetch update login logout and delete generated user,HTTP 200 for successful operations; cleanup generated user
 USER-02,User,GET,/user/{username},Unknown username,HTTP 404 with ApiResponse body
